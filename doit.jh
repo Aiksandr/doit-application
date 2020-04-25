@@ -1,0 +1,90 @@
+enum ClientType {
+    CUSTOMER, PERFORMER
+}
+
+enum OrderStatus {
+    INIT, WORK, DONE, CANCEL
+}
+
+entity Country {
+	countryName String
+}
+
+enum Language {
+    ENGLISH, GREEK
+}
+
+entity Location {
+	city String,
+	area String,
+	streetAddress String,
+	postalCode String
+}
+
+entity Client {
+	firstName String required,
+	lastName String required,
+	email String required,
+    age Long,
+    type ClientType
+}
+
+
+
+
+entity Employee {
+	firstName String,
+	lastName String,
+	email String,
+	phoneNumber String,
+	hireDate Instant
+}
+
+entity Category {
+	name String,
+	description String
+}
+
+entity Order {
+    status OrderStatus,
+	title String,
+	description String,
+	minPrice Long,
+	maxPrice Long,
+}
+
+entity OrderHistory {
+    oldStatus OrderStatus,
+    newStatus OrderStatus,
+	createDate Instant
+}
+
+
+relationship OneToOne {
+    Employee{client} to Client,
+}
+
+relationship OneToMany {
+	Client to Location{client},
+}
+
+relationship ManyToOne {
+	Location{country} to Country,
+    Order{category} to Category,
+	Order{owner} to Client,
+    Order{performer} to Client,
+    Order{location} to Location,
+    Order{language} to Language,
+    OrderHistory{order} to Order
+}
+
+
+
+// Set pagination options
+paginate Client, Order, Employee with pagination
+
+// Use Data Transfert Objects (DTO)
+// dto * with mapstruct
+
+// Set service options to all except few
+service all with serviceImpl
