@@ -1,0 +1,99 @@
+entity User {
+	firstName String required
+	lastName String required
+	email String required
+    age Long
+    type UserType
+    location Location
+    employee Employee
+}
+
+
+enum UserType {
+    CUSTOMER, PERFORMER
+}
+
+enum OrderStatus {
+    INIT, WORK, DONE, CANCEL
+}
+
+entity Country {
+	countryName String
+}
+
+// an ignored comment
+/** not an ignored comment */
+entity Location {
+    country Country,
+	city String,
+	area String,
+	streetAddress String,
+	postalCode String
+}
+
+
+entity Employee {
+	user User
+	firstName String,
+	lastName String,
+	email String,
+	phoneNumber String,
+	hireDate Instant
+}
+
+entity Category {
+	name String,
+	description String
+}
+
+entity Order {
+	category Category required
+	owner User
+    performer User
+    status OrderStatus
+	title String,
+	description String,
+	minPrice Long,
+	maxPrice Long,
+	language Language
+}
+
+entity OrderHistory {
+	order Order,
+    oldStatus OrderStatus,
+    newStatus OrderStatus,
+	createDate Instant
+}
+
+enum Language {
+    ENGLISH, GREEK
+}
+
+relationship OneToOne {
+	Location{country} to Country
+	User{location} to Location
+	User{type} to UserType
+    Employee{user} to User
+    Order{language} to Language
+    Order{status} to OrderStatus
+    OrderHistory{oldStatus} to OrderStatus
+    OrderHistory{newStatus} to OrderStatus
+}
+
+relationship ManyToOne {
+    Order{category} to Category
+	Order{owner} to User
+    Order{performer} to User
+    OrderHistory{order} to Order
+}
+
+
+
+// Set pagination options
+paginate Order, Employee with pagination
+
+// Use Data Transfert Objects (DTO)
+// dto * with mapstruct
+
+// Set service options to all except few
+service all with serviceImpl
