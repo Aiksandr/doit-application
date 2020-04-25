@@ -1,0 +1,9 @@
+{
+  "doitApplicationApp": {
+    "ClientType": {
+      "null": "",
+      "CUSTOMER": "CUSTOMER",
+      "PERFORMER": "PERFORMER"
+    }
+  }
+}

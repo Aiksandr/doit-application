@@ -1,0 +1,28 @@
+{
+  "doitApplicationApp": {
+    "client": {
+      "home": {
+        "title": "Clients",
+        "createLabel": "Δημιουργήστε ένα νέο Client",
+        "createOrEditLabel": "Δημιουργήστε η επεξεργαστείτε ένα Client",
+        "notFound": "No Clients found"
+      },
+      "created": "Ένα νέο Client έχει δημιουργηθεί με αναγνωριστικό {{ param }}",
+      "updated": "Ένα Client έχει ενημερωθεί με αναγνωριστικό {{ param }}",
+      "deleted": "Ένα Client έχει διαγραφτεί με αναγνωριστικό {{ param }}",
+      "delete": {
+        "question": "Είστε βέβαιοι όταν θέλετε να διαγράψετε το ακόλουθο Client {{ id }};"
+      },
+      "detail": {
+        "title": "Client"
+      },
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "email": "Email",
+      "age": "Age",
+      "language": "Language",
+      "type": "Type",
+      "location": "Location"
+    }
+  }
+}

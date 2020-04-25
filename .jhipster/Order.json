@@ -1,0 +1,72 @@
+{
+    "name": "Order",
+    "fields": [
+        {
+            "fieldName": "language",
+            "fieldType": "Language",
+            "fieldValues": "ENGLISH,GREEK"
+        },
+        {
+            "fieldName": "status",
+            "fieldType": "OrderStatus",
+            "fieldValues": "INIT,WORK,DONE,CANCEL"
+        },
+        {
+            "fieldName": "title",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "description",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "minPrice",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "maxPrice",
+            "fieldType": "Long"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "category",
+            "otherEntityRelationshipName": "order",
+            "relationshipName": "category",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "client",
+            "otherEntityRelationshipName": "order",
+            "relationshipName": "owner",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "client",
+            "otherEntityRelationshipName": "order",
+            "relationshipName": "performer",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "location",
+            "otherEntityRelationshipName": "order",
+            "relationshipName": "location",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20200425135500",
+    "entityTableName": "order",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "embedded": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

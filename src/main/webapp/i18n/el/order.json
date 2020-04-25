@@ -1,0 +1,31 @@
+{
+  "doitApplicationApp": {
+    "order": {
+      "home": {
+        "title": "Orders",
+        "createLabel": "Δημιουργήστε ένα νέο Order",
+        "createOrEditLabel": "Δημιουργήστε η επεξεργαστείτε ένα Order",
+        "notFound": "No Orders found"
+      },
+      "created": "Ένα νέο Order έχει δημιουργηθεί με αναγνωριστικό {{ param }}",
+      "updated": "Ένα Order έχει ενημερωθεί με αναγνωριστικό {{ param }}",
+      "deleted": "Ένα Order έχει διαγραφτεί με αναγνωριστικό {{ param }}",
+      "delete": {
+        "question": "Είστε βέβαιοι όταν θέλετε να διαγράψετε το ακόλουθο Order {{ id }};"
+      },
+      "detail": {
+        "title": "Order"
+      },
+      "language": "Language",
+      "status": "Status",
+      "title": "Title",
+      "description": "Description",
+      "minPrice": "Min Price",
+      "maxPrice": "Max Price",
+      "category": "Category",
+      "owner": "Owner",
+      "performer": "Performer",
+      "location": "Location"
+    }
+  }
+}
