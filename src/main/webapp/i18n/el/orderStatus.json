@@ -1,0 +1,11 @@
+{
+  "doitApplicationApp": {
+    "OrderStatus": {
+      "null": "",
+      "INIT": "INIT",
+      "WORK": "WORK",
+      "DONE": "DONE",
+      "CANCEL": "CANCEL"
+    }
+  }
+}

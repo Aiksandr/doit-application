@@ -1,0 +1,39 @@
+{
+    "name": "OrderHistory",
+    "fields": [
+        {
+            "fieldName": "oldStatus",
+            "fieldType": "OrderStatus",
+            "fieldValues": "INIT,WORK,DONE,CANCEL"
+        },
+        {
+            "fieldName": "newStatus",
+            "fieldType": "OrderStatus",
+            "fieldValues": "INIT,WORK,DONE,CANCEL"
+        },
+        {
+            "fieldName": "createDate",
+            "fieldType": "Instant"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "order",
+            "otherEntityRelationshipName": "orderHistory",
+            "relationshipName": "order",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20200425135600",
+    "entityTableName": "order_history",
+    "dto": "no",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "embedded": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

@@ -1,0 +1,25 @@
+{
+  "doitApplicationApp": {
+    "orderHistory": {
+      "home": {
+        "title": "Order Histories",
+        "createLabel": "Δημιουργήστε ένα νέο Order History",
+        "createOrEditLabel": "Δημιουργήστε η επεξεργαστείτε ένα Order History",
+        "notFound": "No Order Histories found"
+      },
+      "created": "Ένα νέο Order History έχει δημιουργηθεί με αναγνωριστικό {{ param }}",
+      "updated": "Ένα Order History έχει ενημερωθεί με αναγνωριστικό {{ param }}",
+      "deleted": "Ένα Order History έχει διαγραφτεί με αναγνωριστικό {{ param }}",
+      "delete": {
+        "question": "Είστε βέβαιοι όταν θέλετε να διαγράψετε το ακόλουθο Order History {{ id }};"
+      },
+      "detail": {
+        "title": "Order History"
+      },
+      "oldStatus": "Old Status",
+      "newStatus": "New Status",
+      "createDate": "Create Date",
+      "order": "Order"
+    }
+  }
+}
